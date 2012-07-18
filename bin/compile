@@ -39,8 +39,7 @@ function indent() {
 }
 
 
-echo "$0"
-pwd
-ls -latr
-cp vendor/haproxy $BUILD_DIR/
+echo "$LP_DIR"
+
+cp $LP_DIR/vendor/haproxy $BUILD_DIR/
 echo "Compilation DONE!"
