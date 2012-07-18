@@ -39,6 +39,7 @@ function indent() {
 }
 
 
+pwd
 ls -latr
 cp vendor/haproxy $BUILD_DIR/
 echo "Compilation DONE!"
