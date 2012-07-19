@@ -41,5 +41,9 @@ function indent() {
 
 echo "$LP_DIR"
 
-cp $LP_DIR/vendor/haproxy $BUILD_DIR/
-echo "Compilation DONE!"
+mkdir -p $BUILD_DIR/bin
+cp $LP_DIR/vendor/haproxy $BUILD_DIR/bin/
+
+echo "-----> Building runtime environment"
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH=\"\$HOME/bin:\$PATH\"" > $BUILD_DIR/.profile.d/haproxy.sh
