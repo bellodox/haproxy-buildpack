@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/haproxy_bind <config-file>
+
+CONFIG_ORIG=$1
+CONFIG_NEW=__haproxy.cfg
+
+cat $CONFIG_ORIG | sed "s/\$PORT/$PORT/g" > "$CONFIG_NEW"
+
+./bin/haproxy -f "$CONFIG_NEW"
+

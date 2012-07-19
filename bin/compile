@@ -42,7 +42,7 @@ function indent() {
 echo "$LP_DIR"
 
 mkdir -p $BUILD_DIR/bin
-cp $LP_DIR/vendor/haproxy $BUILD_DIR/bin/
+cp $LP_DIR/vendor/* $BUILD_DIR/bin/
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
